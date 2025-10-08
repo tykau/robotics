@@ -1,0 +1,703 @@
+/*
+ * Основные стили для презентационного сайта образовательной программы
+ * Цветовая гамма включает зелёно‑синие тона, вдохновлённые традициями Татарстана и миром IT.
+ */
+
+:root {
+  /* Основные цвета */
+  --primary-color: #00846b;      /* насыщенный зеленый, перекликается с цветом Татарстана */
+  --secondary-color: #0060b3;    /* насыщенный синий, ассоциируется с IT и инновациями */
+  --light-color: #f5f9fb;        /* светлый фон для контента */
+  --dark-text: #2c3e50;          /* основной цвет текста */
+  --card-bg: #ffffff;            /* фон карточек и блоков */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* тень для элементов */
+}
+
+/* Базовые настройки */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--light-color);
+  color: var(--dark-text);
+  line-height: 1.6;
+  /* Включаем принудительное прилипающее прокручивание — страница будет
+     останавливаться на начале каждого раздела. */
+  scroll-snap-type: y mandatory;
+}
+
+/* Каждая секция и шапка выравниваются по началу при прокрутке */
+header,
+section {
+  /* Каждый крупный блок фиксируется на экране при прокрутке */
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h2, h3, h4 {
+  margin-top: 0;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 16px;
+
+}
+/*
+ * Заголовки секций выравниваются по горизонтали, чтобы иконка и текст
+ * находились на одной линии. gap задаёт расстояние между ними.
+ */
+section h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Герой (Hero) */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 10% 2rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.hero-content {
+  flex: 1 1 50%;
+  max-width: 560px;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-content h1 .accent {
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 480px;
+}
+
+.hero-image {
+  flex: 1 1 35%;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px var(--shadow-color);
+}
+
+/* Навигационная кнопка */
+/*
+ * Кнопки настроены как inline‑flex, чтобы текст и иконка располагались на одной линии.
+ * Отступ между текстом и иконкой регулируется через gap.
+ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  background-color: #ffffff;
+  color: var(--primary-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+}
+
+/*
+ * Иконки: используем различные размеры для заголовков, кнопок, карточек и таймлайна.
+ * Задаём фиксированную высоту и ширину, чтобы SVG корректно вписывались в макет.
+ */
+.icon-heading {
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+}
+
+.icon-btn {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.icon-card {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 0.8rem;
+  color: var(--primary-color);
+}
+
+.icon-timeline {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.8rem;
+  flex-shrink: 0;
+}
+
+.icon-career {
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Общие блоки секций */
+section {
+  padding: 4rem 10%;
+  box-sizing: border-box;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.4rem;
+  color: var(--primary-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* О программе – шахматная сетка */
+.about-section .program-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Чередование блоков: по умолчанию текст слева, изображение справа; для класса .reverse меняем направление */
+.about-section .program-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-section .program-text {
+  flex: 1 1 50%;
+}
+
+.about-section .program-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.about-section .program-image {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-section .program-image img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px var(--shadow-color);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Эффект при наведении на изображение */
+.about-section .program-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 32px var(--shadow-color);
+}
+
+/* Адаптивность для шахматной сетки – на малых экранах располагаем элементы в колонку */
+@media (max-width: 768px) {
+  .about-section .program-row {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-section .program-row.reverse {
+    flex-direction: column;
+  }
+  .about-section .program-image,
+  .about-section .program-text {
+    flex: 1 1 100%;
+  }
+  .about-section .program-image img {
+    max-width: 100%;
+  }
+}
+
+/* Преимущества */
+.card-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px var(--shadow-color);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 28px var(--shadow-color);
+}
+
+/* Таймлайн */
+.timeline {
+  position: relative;
+  margin-left: 2rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--primary-color);
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.timeline-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.timeline-content {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px var(--shadow-color);
+  width: 100%;
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+}
+
+/* Карьерные блоки */
+.career-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.career-item {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.career-item i {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.career-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.career-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 28px var(--shadow-color);
+}
+
+/* Призыв к действию */
+.cta-section {
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  color: #ffffff;
+  text-align: center;
+  padding: 4rem 10%;
+  box-sizing: border-box;
+  border-radius: 20px 20px 0 0;
+}
+
+.cta-section h2 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.cta-section .btn {
+  background-color: #ffffff;
+  color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cta-section .btn:hover {
+  background-color: #ffffff;
+  color: var(--secondary-color);
+}
+
+/* Подвал */
+footer {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Преподаватели */
+.teachers-section {
+  background-color: var(--light-color);
+}
+
+.teachers-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.flip-card {
+  perspective: 1000px;
+  height: 320px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px var(--shadow-color);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.flip-card-front {
+  background-color: var(--card-bg);
+}
+
+/*
+ * Размер аватаров преподавателей сделан крупнее, чтобы лица были хорошо различимы.
+ * Радиус обрезки и рамка сохраняют аккуратный внешний вид.
+ */
+.flip-card-front img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 0.8rem;
+  border: 3px solid var(--primary-color);
+}
+
+.flip-card-front h3 {
+  margin: 0.5rem 0 0.2rem;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+}
+
+.flip-card-front p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--dark-text);
+}
+
+.flip-card-back {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back p {
+  font-size: 0.9rem;
+  padding: 0 1rem;
+}
+
+/* Галерея */
+.gallery-section {
+  background-color: var(--light-color);
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.gallery-item {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+/* Лайтбокс */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Партнёры */
+.partners-section {
+  background-color: var(--light-color);
+}
+
+.partners-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: center;
+}
+
+.partner-card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner-card img {
+  width: 100px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.partner-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--dark-text);
+}
+
+.partner-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 28px var(--shadow-color);
+}
+
+.partner-card:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Анимации появления при прокрутке */
+.scroll-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 3rem 5% 2rem;
+    text-align: center;
+  }
+  .hero-content, .hero-image {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  .timeline::before {
+    left: 20px;
+  }
+  .timeline-item {
+    margin-left: 0;
+  }
+  .timeline-icon {
+    margin-right: 0.5rem;
+  }
+}
+
+
+.highlighted {
+    font-weight: regular;
+    color: #1E8B7C;  /* вместо #d62828 */
+    background: linear-gradient(90deg, #1E8B7C, #f77f00, #1E8B7C);  /* меняем последний цвет градиента */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #1E8B7C, 0 0 10px #f77f00, 0 0 15px #1E8B7C;
+    }
+    to {
+        text-shadow: 0 0 10px #fcbf49, 0 0 20px #f77f00, 0 0 30px #1E8B7C;
+    }
+}
+
+.link-accent {
+  font-weight: bold;
+  background: linear-gradient(90deg, #1E8B7C, #2A9D8F, #1E8B7C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowLink 2s ease-in-out infinite alternate;
+  text-decoration: none; /* убрать подчеркивание, если нужно */
+}
+
+.link-accent:hover {
+  /* можно усилить тень или цвет при наведении */
+  text-shadow: 0 0 10px #1E8B7C, 0 0 20px #2A9D8F, 0 0 30px #1E8B7C;
+}
+
+@keyframes glowLink {
+  from {
+    text-shadow: 0 0 5px #1E8B7C, 0 0 10px #2A9D8F, 0 0 15px #1E8B7C;
+  }
+  to {
+    text-shadow: 0 0 10px #1E8B7C, 0 0 20px #2A9D8F, 0 0 30px #1E8B7C;
+  }
+}
+
+
+.link-accent-alt {
+  font-weight: bold;
+  background: linear-gradient(90deg, #00728f, #00728f, #00728f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowLink 2s ease-in-out infinite alternate;
+  text-decoration: none; /* убрать подчеркивание, если нужно */
+}
+
+.link-accent-alt:hover {
+  /* можно усилить тень или цвет при наведении */
+  text-shadow: 0 0 10px #1E8B7C, 0 0 20px #2A9D8F, 0 0 30px #1E8B7C;
+}
+
+@keyframes glowLink {
+  from {
+    text-shadow: 0 0 5px #1E8B7C, 0 0 10px #2A9D8F, 0 0 15px #1E8B7C;
+  }
+  to {
+    text-shadow: 0 0 10px #1E8B7C, 0 0 20px #2A9D8F, 0 0 30px #1E8B7C;
+  }
+}
