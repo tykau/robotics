@@ -139,34 +139,29 @@ section h2 {
  * Задаём фиксированную высоту и ширину, чтобы SVG корректно вписывались в макет.
  */
 .icon-heading {
-  width: 1.8rem;
-  height: 1.8rem;
+  font-size: 1.8rem;
   margin-right: 0.4rem;
   vertical-align: middle;
 }
 
 .icon-btn {
-  width: 1.2rem;
-  height: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .icon-card {
-  width: 3rem;
-  height: 3rem;
+  font-size: 3rem;
   margin-bottom: 0.8rem;
   color: var(--primary-color);
 }
 
 .icon-timeline {
-  width: 1.5rem;
-  height: 1.5rem;
+  font-size: 1.5rem;
   margin-right: 0.8rem;
   flex-shrink: 0;
 }
 
 .icon-career {
-  width: 2rem;
-  height: 2rem;
+  font-size: 2rem;
   margin-bottom: 0.8rem;
 }
 
@@ -320,10 +315,14 @@ section h2 {
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  font-size: 1.5rem;
   margin-right: 1rem;
   flex-shrink: 0;
   box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.timeline-icon i {
+  font-size: 1.5rem;
+  line-height: 1;
 }
 
 .timeline-content {
@@ -403,6 +402,15 @@ section h2 {
   background-color: #ffffff;
   color: var(--secondary-color);
 }
+
+.cta-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* выравнивание по центру */
+  justify-content: center;
+  text-align: center;
+}
+
 
 /* Подвал */
 footer {
@@ -700,4 +708,93 @@ footer p {
   to {
     text-shadow: 0 0 10px #1E8B7C, 0 0 20px #2A9D8F, 0 0 30px #1E8B7C;
   }
+}
+
+.facts-section {
+  background-color: var(--light-color);
+  padding: 4rem 10%;
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.fact-card {
+  perspective: 1000px;
+  height: 160px;
+}
+
+.fact-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px var(--shadow-color);
+}
+
+.fact-card:hover .fact-inner {
+  transform: rotateY(180deg);
+}
+
+.fact-front, .fact-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.fact-front {
+  background-color: var(--card-bg);
+  color: var(--dark-text);
+}
+
+.fact-front h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+.fact-front p {
+  margin: 0.3rem 0 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.fact-back {
+  background-color: var(--secondary-color);
+  color: #fff;
+  transform: rotateY(180deg);
+  font-size: 0.95rem;
+}
+
+.grad-heading {
+  font-size: 18px;
+}
+
+
+.cta-extra {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.cta-image {
+  margin-top: 1rem;
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }

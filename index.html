@@ -8,6 +8,8 @@
     <!-- Подключаем Google Fonts: современный гротеск -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Удалён Font Awesome: все иконки используются как локальные SVG -->
+    <!-- Подключаем Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Основные стили -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,29 +18,140 @@
     <!-- Герой (Hero) с заголовком и иллюстрацией -->
     <header class="hero">
         <div class="hero-content">
-            <h1 class="grad-heading">
+            <h1 class="grad-heading" style="font-size: 38px;">
                 44.03.05 Педагогическое образование (с двумя профилями подготовки)<br>
                 <span class="accent">Математика и Дополнительное образование (робототехника и программирование)</span>
             </h1>
+            <h2><u>В билингвальной образовательной среде</u> </h2>
 
             <p>Совмещайте фундаментальную математику с робототехникой и программированием. Обучайтесь тому, что будет
                 востребовано в будущем.</p>
-            <a href="#about" class="btn"><span>Узнать больше</span><img src="assets/icons/arrow-down.svg" alt=""
-                    class="icon-btn"></a>
+            <a href="#about" class="btn"><span>Узнать больше</span><i class="fa-solid fa-arrow-down icon-btn"></i></a>
         </div>
         <div class="hero-image">
             <!-- Иллюстрация создана специально для сайта -->
             <img src="assets/hero.png" alt="Обучение робототехнике">
         </div>
     </header>
+    <section id="about" class="facts-section">
+        <div class="container facts-grid">
+
+            <!-- Карточка 2 -->
+            <div class="fact-card">
+                <div class="fact-inner">
+                    <div class="fact-front">
+                        <h3>Форма обучения</h3>
+                        <p>Очная</p>
+                    </div>
+                    <div class="fact-back">
+                        <p>Занятия проходят в одном из лучших зданий КФУ в современном центре EduTech</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Карточка 1 -->
+            <div class="fact-card">
+                <div class="fact-inner">
+                    <div class="fact-front">
+                        <h3>Срок обучения</h3>
+                        <p>5 лет</p>
+                    </div>
+                    <div class="fact-back">
+                        <p>Весь период обучения будет насыщенным на разнообразные и необходимые для современного
+                            профессионала дисциплины</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Карточка 3 -->
+            <div class="fact-card">
+                <div class="fact-inner">
+                    <div class="fact-front">
+                        <h3>Язык обучения</h3>
+                        <p>Русский + Татарский + Английский</p>
+                    </div>
+                    <div class="fact-back">
+                        <p>Акцент на билингвальное обучение и интеграцию английского языка.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 4 -->
+            <div class="fact-card">
+                <div class="fact-inner">
+                    <div class="fact-front">
+                        <h3>Стипендия</h3>
+                        <p>15 000 рублей</p>
+                    </div>
+                    <div class="fact-back">
+                        <p>Обучение студентов поддерживается Правительством Республики Татарстан</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Карточка 4 -->
+            <div class="fact-card">
+                <div class="fact-inner">
+                    <div class="fact-front">
+                        <h3>Целевое обучение</h3>
+                        <p>Да</p>
+                    </div>
+                    <div class="fact-back">
+                        <p>Гарантированное устройство с возможностью выбора школы для дальнейшей работы</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 4 -->
+            <div class="fact-card">
+                <div class="fact-inner">
+                    <div class="fact-front">
+                        <h3>Гос. аккредитация</h3>
+                        <p>Да</p>
+                    </div>
+                    <div class="fact-back">
+                        <p>Ввыпускники получают диплом гос.образца,
+                            студенты имеют отсрочку от службы в армии.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 4 -->
+            <div class="fact-card">
+                <div class="fact-inner">
+                    <div class="fact-front">
+                        <h3>Общежите</h3>
+                        <p>Да</p>
+                    </div>
+                    <div class="fact-back">
+                        <p>Студенты, обучающиеся по этой программе, проживают в лучшем студенческом кампусе Казани</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 4 -->
+
+
+            <!-- Карточка 4 -->
+            <div class="fact-card">
+                <div class="fact-inner">
+                    <div class="fact-front">
+                        <h3>Будущее</h3>
+                        <p> <span class="highlighted">светлое</span></p>
+                    </div>
+                    <div class="fact-back">
+                        <p>Спросите любого нашего выпускника и убедитесь в этом</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <main>
         <!-- О программе -->
-        <section id="about" class="about-section scroll-hidden">
+        <section class="about-section scroll-hidden">
             <div class="container">
-                <h2><img src="assets/icons/info-circle.svg" alt="" class="icon-heading"> О программе 44.03.05
-                    Педагогическое образование (с двумя профилями подготовки) — Математика и
-                    Дополнительное образование (робототехника и программирование) </h2>
+                <h2><i class="fa-solid fa-circle-info icon-heading"></i> О программе </h2>
                 <!-- Разбиваем описание программы на строки шахматной сеткой -->
                 <div class="program-row">
                     <div class="program-text">
@@ -101,7 +214,7 @@
         <!-- Преподаватели и руководитель -->
         <section class="teachers-section">
             <div class="container">
-                <h2><img src="assets/icons/users.svg" alt="" class="icon-heading"> Команда кафедры билингвального и
+                <h2><i class="fa-solid fa-users icon-heading"></i> Команда кафедры билингвального и
                     цифрового образования</h2>
                 <div class="teachers-grid">
                     <!-- Карточка преподавателя 3 -->
@@ -222,7 +335,7 @@
         <!-- Фотогалерея -->
         <section class="gallery-section">
             <div class="container">
-                <h2><img src="assets/icons/images.svg" alt="" class="icon-heading">Наши моменты и вайбы</h2>
+                <h2><i class="fa-solid fa-images icon-heading"></i>Наши моменты и вайбы</h2>
                 <div class="gallery-grid">
                     <img src="assets/events/event01.jpg" alt="Учебная аудитория" class="gallery-item">
                     <img src="assets/events/event02.jpg" alt="Лабораторное занятие" class="gallery-item">
@@ -241,7 +354,7 @@
         <!-- Партнёры программы -->
         <section class="partners-section">
             <div class="container">
-                <h2><img src="assets/icons/handshake.svg" alt="" class="icon-heading"> Партнёры</h2>
+                <h2><i class="fa-solid fa-handshake icon-heading"></i> Партнёры</h2>
                 <div class="partners-grid">
                     <div class="partner-card">
                         <img src="assets/partners/digis.png" alt="">
@@ -266,23 +379,22 @@
         <!-- Преимущества -->
         <section class="benefits-section">
             <div class="container">
-                <h2><img src="assets/icons/star.svg" alt="" class="icon-heading"> Преимущества</h2>
+                <h2><i class="fa-solid fa-star icon-heading"></i> Преимущества</h2>
                 <div class="card-grid">
                     <div class="card scroll-hidden">
-                        <img src="assets/icons/calculator.svg" alt="Иконка математического калькулятора"
-                            class="icon-card">
+                        <i class="fa-solid fa-calculator icon-card"></i>
                         <h3>Фундаментальная математика</h3>
                         <p>Углубленный курс алгебры, анализа, геометрии и теории вероятностей обеспечивает прочную
                             теоретическую базу.</p>
                     </div>
                     <div class="card scroll-hidden">
-                        <img src="assets/icons/robot.svg" alt="Иконка робота" class="icon-card">
+                        <i class="fa-solid fa-robot icon-card"></i>
                         <h3>Робототехника и программирование</h3>
                         <p>Практика работы с микроконтроллерами, датчиками и программированием роботов готовит к
                             инженерным задачам будущего.</p>
                     </div>
                     <div class="card scroll-hidden">
-                        <img src="assets/icons/chalkboard-teacher.svg" alt="Иконка преподавателя" class="icon-card">
+                        <i class="fa-solid fa-chalkboard-user icon-card"></i>
                         <h3>Современные педагогические технологии</h3>
                         <p>Освоение цифровых платформ, билингвальных методик и интерактивных подходов для эффективного
                             обучения школьников.</p>
@@ -294,11 +406,10 @@
         <!-- Учебный план -->
         <section class="curriculum-section">
             <div class="container">
-                <h2><img src="assets/icons/stream.svg" alt="" class="icon-heading"> Структура обучения (5&nbsp;лет)</h2>
+                <h2><i class="fa-solid fa-diagram-project icon-heading"></i> Структура обучения (5&nbsp;лет)</h2>
                 <div class="timeline">
                     <div class="timeline-item scroll-hidden">
-                        <span class="timeline-icon"><img src="assets/icons/seedling.svg" alt="Иконка начала"
-                                class="icon-timeline"></span>
+                        <span class="timeline-icon"><i class="fa-solid fa-seedling icon-timeline"></i></span>
                         <div class="timeline-content">
                             <h3>1&nbsp;курс</h3>
                             <p>Базовые математические дисциплины, введение в педагогическую деятельность, основы
@@ -306,8 +417,7 @@
                         </div>
                     </div>
                     <div class="timeline-item scroll-hidden">
-                        <span class="timeline-icon"><img src="assets/icons/microchip.svg" alt="Иконка микрочипа"
-                                class="icon-timeline"></span>
+                        <span class="timeline-icon"><i class="fa-solid fa-microchip icon-timeline"></i></span>
                         <div class="timeline-content">
                             <h3>2&nbsp;курс</h3>
                             <p>Математический анализ и вероятность, программирование на Python, работа с
@@ -315,8 +425,7 @@
                         </div>
                     </div>
                     <div class="timeline-item scroll-hidden">
-                        <span class="timeline-icon"><img src="assets/icons/network-wired.svg" alt="Иконка сети"
-                                class="icon-timeline"></span>
+                        <span class="timeline-icon"><i class="fa-solid fa-network-wired icon-timeline"></i></span>
                         <div class="timeline-content">
                             <h3>3&nbsp;курс</h3>
                             <p>Алгебра и дифференциальные уравнения, проектирование образовательных модулей,
@@ -324,18 +433,15 @@
                         </div>
                     </div>
                     <div class="timeline-item scroll-hidden">
-                        <span class="timeline-icon"><img src="assets/icons/graduation-cap.svg"
-                                alt="Иконка выпускного колпака" class="icon-timeline"></span>
+                        <span class="timeline-icon"><i class="fa-solid fa-graduation-cap icon-timeline"></i></span>
                         <div class="timeline-content">
                             <h3>4&nbsp;курс</h3>
                             <p>Специализированные дисциплины, педагогические исследования и научные проекты, подготовка
                                 к выпускной квалификационной работе.</p>
                         </div>
                     </div>
-                    <!-- Пятый год обучения -->
                     <div class="timeline-item scroll-hidden">
-                        <span class="timeline-icon"><img src="assets/icons/award.svg" alt="Иконка награды"
-                                class="icon-timeline"></span>
+                        <span class="timeline-icon"><i class="fa-solid fa-award icon-timeline"></i></span>
                         <div class="timeline-content">
                             <h3>5&nbsp;курс</h3>
                             <p>Подготовка и защита выпускной квалификационной работы, стажировки в школах и технопарках,
@@ -346,25 +452,26 @@
             </div>
         </section>
 
+
         <!-- Карьерные перспективы -->
         <section class="career-section">
             <div class="container">
-                <h2><img src="assets/icons/briefcase.svg" alt="" class="icon-heading"> Перспективы выпускников</h2>
+                <h2><i class="fa-solid fa-briefcase icon-heading"></i> Перспективы выпускников</h2>
                 <div class="career-grid">
                     <div class="career-item scroll-hidden">
-                        <img src="assets/icons/school.svg" alt="Иконка школы" class="icon-career">
+                        <i class="fa-solid fa-school icon-career"></i>
                         <h3>Учитель математики</h3>
                         <p>Преподавайте математику в школах, лицеях и гимназиях, используя инновационные методы и
                             цифровые сервисы.</p>
                     </div>
                     <div class="career-item scroll-hidden">
-                        <img src="assets/icons/robot.svg" alt="Иконка робота" class="icon-career">
+                        <i class="fa-solid fa-robot icon-career"></i>
                         <h3>Преподаватель робототехники</h3>
                         <p>Ведите кружки и факультативы по робототехнике, развивая технические навыки и творческое
                             мышление школьников.</p>
                     </div>
                     <div class="career-item scroll-hidden">
-                        <img src="assets/icons/laptop-code.svg" alt="Иконка ноутбука" class="icon-career">
+                        <i class="fa-solid fa-laptop-code icon-career"></i>
                         <h3>IT‑специалист в образовании</h3>
                         <p>Разрабатывайте обучающие приложения и веб‑платформы, внедряйте цифровые технологии в учебный
                             процесс и курируйте EdTech‑проекты.</p>
@@ -376,18 +483,22 @@
         <!-- Призыв к действию -->
         <section class="cta-section">
             <div class="container scroll-hidden">
-                <h2><img src="assets/icons/paper-plane.svg" alt="" class="icon-heading"> Готовы начать путь?</h2>
-                <p>Свяжитесь с нами, чтобы узнать больше о программе и условиях поступления.</p>
-                <a href="#" class="btn"><span>Связаться</span><img src="assets/icons/envelope.svg" alt=""
-                        class="icon-btn"></a>
+                <h2><i class="fa-solid fa-paper-plane icon-heading"></i> Присоединяйся к нашей команде!</h2>
+                <p>Стань частью студенческого сообщества, где математика, робототехника и новые технологии превращаются
+                    в настоящие проекты и дружбу.</p>
+                <a href="#" class="btn"><span>Хочу в команду</span><i class="fa-solid fa-envelope icon-btn"></i></a>
+                <p class="cta-extra">А также у нас есть телеграм-канал</p>
+                <a href="https://t.me/digidep"><img src="assets/TG_subs.png" alt="Telegram канал" class="cta-image"></a>
             </div>
         </section>
+
+
     </main>
 
     <!-- Подвал -->
     <footer>
         <div class="container">
-            <p>&copy;&nbsp;2025 Педагогическое образование: математика и робототехника. Все права защищены.</p>
+            <p>&copy;&nbsp;2025 КФУ, кафедра билингвального и цифрового образования. Все права защищены.</p>
         </div>
     </footer>
 
