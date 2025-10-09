@@ -579,8 +579,8 @@ footer p {
 }
 
 .partner-card img {
-  width: 100px;
-  height: 60px;
+  width: 120px;
+  height: 120px;
   object-fit: contain;
   margin-bottom: 0.5rem;
   filter: grayscale(100%);
